@@ -4,6 +4,7 @@ import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Scanner;
 
 class Bird {
     public Bird() {
@@ -64,5 +65,18 @@ public class Main {
         NumberFormat percent = NumberFormat.getPercentInstance();
         String result2 = percent.format(0.145);
         System.out.println(result2);
+
+        // reading data
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Age: ");
+        byte age = scanner.nextByte();
+        scanner.nextLine();
+        System.out.println("You are " + age);
+
+        System.out.print("Name: ");
+        String name = scanner.nextLine().trim();
+        System.out.println("You are " + name);
+
+        scanner.close();
     }
 }
