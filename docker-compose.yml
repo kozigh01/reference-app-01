@@ -1,33 +1,42 @@
 ---
 version: '3'
 services:
-  java-1:
-    build:
-      context: ./java/JavaTutorialForBeginners/.devcontainer
-      dockerfile: Dockerfile
-      args: 
-        VARIANT: "11"
-        INSTALL_MAVEN: "false"
-        INSTALL_GRADLE: "false"
-        INSTALL_NODE: "true"
-        NODE_VERSION: "lts/*"
-    volumes: 
-      - .:/workspace:cached
-    command: sleep infinity
+  # java-1:
+  #   build:
+  #     context: ./java/JavaTutorialForBeginners/.devcontainer
+  #     dockerfile: Dockerfile
+  #     args: 
+  #       VARIANT: "11"
+  #       INSTALL_MAVEN: "false"
+  #       INSTALL_GRADLE: "false"
+  #       INSTALL_NODE: "true"
+  #       NODE_VERSION: "lts/*"
+  #   volumes: 
+  #     - .:/workspace
+  #   command: sleep infinity
       
-  util-node:
-    build:
-      context: ./util/util-node/.devcontainer
-      dockerfile: Dockerfile
-      args:
-        # [Choice] Node.js version: 14, 12, 10
-        VARIANT: 14
-        # On Linux, you may need to update USER_UID and USER_GID below if not your local UID is not 1000.
-        USER_UID: 1000
-        USER_GID: 1000    
-    volumes: 
-      - ./util/util-node:/workspace:cached
-    command: sleep infinity
+  # util-node:
+  #   build:
+  #     context: ./util/util-node/.devcontainer
+  #     dockerfile: Dockerfile
+  #     args:
+  #       # [Choice] Node.js version: 14, 12, 10
+  #       VARIANT: 14
+  #       # On Linux, you may need to update USER_UID and USER_GID below if not your local UID is not 1000.
+  #       USER_UID: 1000
+  #       USER_GID: 1000    
+  #   volumes: 
+  #     - ./util/util-node:/workspace
+  #   command: sleep infinity
+
+    kafka-zoe:
+      build:
+        context: ./kafka/zoe/.devcontainer
+        dockerfile: Dockerfile
+      volumes:
+        - ./kafka/zoe:/workspace
+      command: sleep infinity
+
 
   # db:
   #   image: postgres:latest

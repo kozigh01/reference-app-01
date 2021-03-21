@@ -1,0 +1,3 @@
+FROM adevinta/zoe-cli:latest
+
+CMD ['sleep', 'infinity']
