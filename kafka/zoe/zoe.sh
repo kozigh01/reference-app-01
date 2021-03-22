@@ -6,6 +6,7 @@ apt --yes update
 apt --yes upgrade
 apt --yes install libasound2
 apt --yes --fix-broken install
+apt install jq
 
 # Zoe installation: https://adevinta.github.io/zoe/install/package/
 # ZOE_VERSION='0.26.0'  # change it to the suitable version
@@ -16,7 +17,9 @@ PATH=$PATH:/opt/zoe/bin
 
 # configuration: https://adevinta.github.io/zoe/configuration/init/
 # change ~/.zoe/config/default.yml "bootstrap.servers" to "brokern"
-zoe config init --from git --url 'https://github.com/adevinta/zoe.git' --dir docs/guides/simple/config
+# zoe config init --from git --url 'https://github.com/adevinta/zoe.git' --dir docs/guides/simple/config
+zoe config init
+cp ./default.yml ~/.zoe/config/default.yml
 
 
 
