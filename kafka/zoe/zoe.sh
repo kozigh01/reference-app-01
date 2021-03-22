@@ -2,8 +2,8 @@
 # fix broken packages in linux: https://www.maketecheasier.com/fix-broken-packages-ubuntu/
 
 # add dependencies that will be needed by the zoe.deb installation
-apt update
-apt upgrade
+apt --yes update
+apt --yes upgrade
 apt --yes install libasound2
 apt --yes --fix-broken install
 
@@ -15,7 +15,7 @@ sudo dpkg -i /tmp/zoe.deb
 PATH=$PATH:/opt/zoe/bin
 
 # configuration: https://adevinta.github.io/zoe/configuration/init/
-# change ~/.zoe/config/default.yml "bootstrap.servers" to ""
+# change ~/.zoe/config/default.yml "bootstrap.servers" to "brokern"
 zoe config init --from git --url 'https://github.com/adevinta/zoe.git' --dir docs/guides/simple/config
 
 
