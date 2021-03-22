@@ -21,6 +21,14 @@ PATH=$PATH:/opt/zoe/bin
 zoe config init
 cp ./default.yml ~/.zoe/config/default.yml
 
+# https://www.katacoda.com/wlezzar/courses/zoe/zoe-basics
+zoe config clusters list | jq
+zoe -o table config clusters list
+zoe --cluster default topics list | jq
+zoe --cluster default -o table topics list
+zoe topics create cat-facts --partitions 5
+zoe topics list | jq
+
 
 
 # https://www.katacoda.com/wlezzar/courses/zoe
