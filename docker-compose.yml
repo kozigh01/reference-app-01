@@ -29,14 +29,21 @@ services:
   #     - ./util/util-node:/workspace
   #   command: sleep infinity
 
-  kafka-zoe:
+  # kafka-zoe:
+  #   build:
+  #     context: ./kafka/zoe/.devcontainer
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./kafka/zoe:/workspace
+  #   command: sleep infinity
+
+  kafka-udemy:
     build:
-      context: ./kafka/zoe/.devcontainer
+      context: ./kafka/udemy_LearnApacheKafkaForBeginners/.devcontainer
       dockerfile: Dockerfile
     volumes:
-      - ./kafka/zoe:/workspace
+      - ./kafka/udemy_LearnApacheKafkaForBeginners:/workspace
     command: sleep infinity
-
 
   # db:
   #   image: postgres:latest
