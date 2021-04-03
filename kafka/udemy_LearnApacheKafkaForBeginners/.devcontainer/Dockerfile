@@ -13,6 +13,7 @@ WORKDIR /workspace
 RUN apt --yes update \
     && apt --yes upgrade \
     && apt --yes install default-jre
+    && apt --yes install kafkacat
 
     # RUN sudo adduser kafka \
     # && sudo adduser kafka \

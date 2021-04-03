@@ -4,7 +4,6 @@ apt update
 apt upgrade
 
 sudo adduser kafka
-sudo adduser kafka
 sudo adduser kafka sudo
 su -l kafka
 mkdir ~/Downloads

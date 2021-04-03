@@ -26,22 +26,4 @@ Course: [Udemy](https://www.udemy.com/course/apache-kafka/)
     $ export PATH="/home/kafka/kafka/bin:$PATH"
     ```
   * kafka pw: kafka
-
-## Course Sections
-
-### Section 6 CLI 101
-* Topics:
-  * Show command options: `$ kafka-topics.sh`
-  * List topics: `$ kafka-topics.sh --bootstrap-server broker:29092 --list`
-  * Create topic: `$ kafka-topics.sh --bootstrap-server broker:29092 --topic first_topic --create --partitions 3 --replication-factor 1`
-  * Get info on topic: `$ kafka-topics.sh --bootstrap-server broker:29092 --topic first_topic --describe`
-  * Delete topic: `$ kafka-topics.sh --bootstrap-server broker:29092 --topic first_topic --delete`
-* Producers:
-  * Show command options: `$ kafka-console-producer.sh`
-  * Produce interactively: `$ kafka-console-producer.sh --bootstrap-server broker:29092 --topic first_topic`
-    * cntl c: to stop producing
-  * Produce with producer property: `$ kafka-console-producer.sh --bootstrap-server broker:29092 --topic first_topic --producer-property acks=all`
-  * Produce to new topic will create topic: `$ kafka-console-producer.sh --bootstrap-server broker:29092 --topic new_topic`
-    * defaults newly created topic to 1 partision and 1 replica.  Can change this by editing config/server.properties
-* Consumers:
-  * Show command options: `$ kafka-console-consumer.sh`
+* Kafkacat: [github](https://github.com/edenhill/kafkacat) | [blog](https://medium.com/@coderunner/debugging-with-kafkacat-df7851d21968)
