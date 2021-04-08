@@ -15,19 +15,33 @@ services:
   #     - .:/workspace
   #   command: sleep infinity
   
-  java-vs-code:
-    build:
-      context: ./java/VSCode_Tutorial/.devcontainer
-      dockerfile: Dockerfile
-      args: 
-        VARIANT: "11"
-        INSTALL_MAVEN: "true"
-        INSTALL_GRADLE: "false"
-        INSTALL_NODE: "false"
-        NODE_VERSION: "lts/*"
-    volumes: 
-      - .:/workspace
-    command: sleep infinity
+  # java-vs-code:
+  #   build:
+  #     context: ./java/VSCode_Tutorial/.devcontainer
+  #     dockerfile: Dockerfile
+  #     args: 
+  #       VARIANT: "11"
+  #       INSTALL_MAVEN: "true"
+  #       INSTALL_GRADLE: "false"
+  #       INSTALL_NODE: "false"
+  #       NODE_VERSION: "lts/*"
+  #   volumes: 
+  #     - .:/workspace
+  #   command: sleep infinity
+  
+    java-kafka:
+      build:
+        context: ./java/VSCode_Tutorial/.devcontainer
+        dockerfile: Dockerfile
+        args: 
+          VARIANT: "11"
+          INSTALL_MAVEN: "true"
+          INSTALL_GRADLE: "false"
+          INSTALL_NODE: "false"
+          NODE_VERSION: "lts/*"
+      volumes: 
+        - .:/workspace
+      command: sleep infinity
 
   # util-node:
   #   build:
