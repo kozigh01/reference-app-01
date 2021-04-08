@@ -1,0 +1,5 @@
+{
+  "maven.view": "hierarchical",
+  "maven.executable.path": "/usr/local/sdkman/candidates/maven/current/bin/mvn",
+  "java.configuration.updateBuildConfiguration": "interactive"
+}
