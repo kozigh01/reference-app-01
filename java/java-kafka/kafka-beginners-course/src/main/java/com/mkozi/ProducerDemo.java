@@ -29,9 +29,13 @@ public class ProducerDemo {
         
         for (int i = 1; i <= 10; i++) {
             // send data
-            ProducerRecord<String, String> record = new ProducerRecord<String,String>(
-                "first_topic", 
-                "hello from Java producer: " + Integer.toString(i));
+            String topic = "first_topic";
+            String value = "hello from Java producer: " + Integer.toString(i);
+            String key = "Id_" + Integer.toString(i);
+
+            ProducerRecord<String, String> record = new ProducerRecord<String,String>(topic, key, value);
+
+            logger.info("Key: " + key);
 
             producer.send(record, new Callback() {
                 @Override
