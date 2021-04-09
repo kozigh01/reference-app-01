@@ -18,3 +18,6 @@ Reference app using VS Code remote container development
 
 * Producers:
   * Kafka docs: [producer configs](https://kafka.apache.org/documentation/#producerconfigs)
+
+* Consumers:
+  * Kafka docs: [consumer configs](https://kafka.apache.org/documentation/#consumerconfigs)
