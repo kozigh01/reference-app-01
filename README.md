@@ -15,3 +15,6 @@ Reference app using VS Code remote container development
   * Github: [microsoft/vscode-java-pack](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md)
 * youtube:
     * Programming with Mosh: [Java Tutorial for Beginners 2020](https://www.youtube.com/watch?v=eIrMbAQSU34)
+
+* Producers:
+  * Kafka docs: [producer configs](https://kafka.apache.org/documentation/#producerconfigs)
