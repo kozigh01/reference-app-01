@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ConsumerDemoAssignSeek",
+            "request": "launch",
+            "mainClass": "com.mkozi.ConsumerDemoAssignSeek",
+            "projectName": "kafka-beginners-course"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
