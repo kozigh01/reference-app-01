@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TwitterProducer",
+            "request": "launch",
+            "mainClass": "com.mkozi.twitter.TwitterProducer",
+            "projectName": "kafka-beginners-course"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "com.mkozi.twitter.App",
+            "projectName": "kafka-beginners-course"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "com.mkozi.App",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Launch ConsumerDemoAssignSeek",
             "request": "launch",
             "mainClass": "com.mkozi.ConsumerDemoAssignSeek",
