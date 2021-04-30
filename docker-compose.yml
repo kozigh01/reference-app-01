@@ -55,6 +55,7 @@ services:
   #       USER_GID: 1000    
   #   volumes: 
   #     - ./util/util-node:/workspace
+  #     /workspace/node_modules
   #   command: sleep infinity
 
   # kafka-zoe:
